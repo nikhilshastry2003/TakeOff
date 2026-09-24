@@ -1,59 +1,73 @@
 # Production Readiness
 
-Evidence-based production readiness auditor for software repositories.
+**Know if your app is actually ready for production — with evidence.**
 
-Upload a GitHub repository or ZIP and get a clear answer to:
+Upload a GitHub repo or ZIP. Get a clear readiness score, findings backed by real evidence, and a prioritized plan to fix what matters.
 
-> Is this application ready for production?  
-> What is stopping it?  
-> What should the team fix first?
+No vague AI opinions. No deployment platform. Just honest answers.
 
-## What it does (V1)
+---
 
-1. **Inspects** the repository (Dockerfile, CI/CD, configs, dependencies, documentation, etc.)
-2. **Collects evidence** with deterministic checks
-3. **Evaluates** readiness across key categories:
-   - Security
-   - Docker / Containers
-   - CI/CD
-   - Reliability
-   - Observability
-   - Configuration & Environment
-   - Deployment / Operations
-4. **Produces findings** with severity and evidence
-5. **Explains** the gaps (via AI)
-6. **Generates** a prioritized remediation plan and professional report
+## The problem
+
+Most small teams ship code that works... until it doesn't.
+
+They have Dockerfiles, CI pipelines, and config files — but no clear answer to:
+
+- Is the production image pinned?
+- Are secrets leaking?
+- Is there a health check?
+- Can we actually recover if something fails?
+- Is the app observable?
+
+Manual review is slow and inconsistent. This product automates the first serious pass.
+
+## What it does
+
+1. Inspects the repository
+2. Collects evidence (Dockerfiles, CI workflows, configs, docs, etc.)
+3. Runs deterministic readiness checks
+4. Surfaces findings with severity + proof
+5. Explains why each gap matters
+6. Produces a prioritized remediation plan
+
+### Categories (V1)
+- Security
+- Docker / Containers
+- CI/CD
+- Reliability
+- Observability
+- Configuration & Environment
+- Deployment / Operations
 
 ## Core principle
 
 **Evidence before judgment.**
 
-Deterministic checks establish facts. AI is used only for explanation, prioritization, and remediation suggestions — never as the source of truth.
+Deterministic checks establish the facts.  
+AI is used only to explain findings and suggest fixes — never as the source of truth.
 
-## Product boundaries (V1)
+## What this is *not*
 
-This is an **auditor and advisor**, not a deployment platform.
+- Not a deployment platform
+- Not a CI/CD tool
+- Not infrastructure provisioning
+- Not an autonomous DevOps agent
 
-It does **not**:
-- Deploy applications
-- Provision infrastructure
-- Take control of customer environments
-- Act as a CI/CD or monitoring platform
+It assesses and recommends. It does not take control of your infrastructure.
 
-It tells teams what is wrong, why it matters, what the evidence is, how serious it is, and how to fix it.
+## Who it's for
 
-## Target users
-
-Small software teams (roughly 1–20 engineers):
+Small software teams (1–20 engineers):
 - SaaS startups
 - Development agencies
-- MSPs
 - Product engineering teams
+- MSPs
 
 ## Status
 
-Early development. Focused on a fast, trustworthy V1 that can be launched and validated quickly.
+Early development. Building a focused, trustworthy V1 that can be launched and validated quickly.
 
 ---
 
-*This repository contains the source for the Production Readiness product.*
+*This repository contains the source code for the product.*
